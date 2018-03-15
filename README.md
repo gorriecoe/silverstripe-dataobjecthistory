@@ -15,3 +15,26 @@ composer require gorriecoe/silverstripe-dataobjecthistory
 ## Maintainers
 
 - [Gorrie Coe](https://github.com/gorriecoe)
+
+## Example
+
+```php
+<?php
+
+use gorriecoe\DataObjectHistory\extensions\DataObjectHistory;
+
+class MyObject extends DataObject
+{
+    private static $extensions = [
+        DataObjectHistory::class
+    ];
+
+    public function getCMSFields()
+    {
+        $fields = FieldList::create();
+        ...
+        $this->extend('updateCMSFields', $fields); // Required
+        return $fields;
+    }
+}
+```
