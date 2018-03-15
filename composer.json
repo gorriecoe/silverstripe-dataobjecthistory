@@ -1,0 +1,27 @@
+{
+  "name": "gorriecoe/silverstripe-dataobjecthistory",
+  "description": "Adds a history tab to dataobjects",
+  "type": "silverstripe-vendormodule",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Gorrie Coe",
+      "email": "gorriecoe@gmail.com"
+    }
+  ],
+  "keywords": [
+    "silverstripe",
+    "modular",
+    "history"
+  ],
+  "homepage": "http://github.com/gorriecoe/silverstripe-dataobjecthistory",
+  "require": {
+
+  },
+  "extra": {
+    "installer-name": "dataobjecthistory",
+    "expose": [
+      "client/dist"
+    ]
+  }
+}
