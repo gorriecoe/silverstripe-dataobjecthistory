@@ -9,6 +9,8 @@ composer require gorriecoe/silverstripe-dataobjecthistory
 
 ## Requirements
 
+- silverstripe/framework ^4.0
+- symbiote/silverstripe-gridfieldextensions ^3.1
 
 ## Maintainers
 
