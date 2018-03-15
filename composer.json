@@ -17,12 +17,9 @@
   "homepage": "http://github.com/gorriecoe/silverstripe-dataobjecthistory",
   "require": {
     "silverstripe/cms": "^4.0",
-    "symbiote/silverstripe-gridfieldextensions": "^3.1",
+    "symbiote/silverstripe-gridfieldextensions": "^3.1"
   },
   "extra": {
-    "installer-name": "dataobjecthistory",
-    "expose": [
-      "client/dist"
-    ]
+    "installer-name": "dataobjecthistory"
   }
 }
