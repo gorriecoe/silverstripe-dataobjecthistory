@@ -9,14 +9,15 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RecordViewer;
 use SilverStripe\Forms\GridField\GridFieldPageCount;
 use SilverStripe\Forms\GridField\GridFieldToolbarHeader;
 use SilverStripe\Forms\GridField\GridFieldSortableHeader;
-use Symbiote\GridFieldExtensions\GridFieldTitleHeader;
 use SilverStripe\Forms\GridField\GridFieldDetailForm;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\Forms\GridField\GridFieldPaginator;
 use SilverStripe\Forms\GridField\GridFieldViewButton;
+use SilverStripe\Security\Member;
+use SilverStripe\Versioned\Versioned;
+use Symbiote\GridFieldExtensions\GridFieldTitleHeader;
 use gorriecoe\DataObjectHistory\Forms\GridFieldHistoryButton;
 use gorriecoe\DataObjectHistory\Forms\HistoryGridFieldItemRequest;
-use SilverStripe\Versioned\Versioned;
 
 /**
  * DataObjectHistory
@@ -86,5 +87,17 @@ class DataObjectHistory extends DataExtension
             )
             ->addExtraClass('grid-field--history')
         );
+    }
+
+    /**
+     * @return Member
+     */
+    public function getAuthor()
+    {
+        $owner = $this->owner;
+        if ($owner->AuthorID) {
+            return Member::get()->byId($owner->AuthorID);
+        }
+        return null;
     }
 }
