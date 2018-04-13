@@ -21,11 +21,13 @@ composer require gorriecoe/silverstripe-dataobjecthistory
 ```php
 <?php
 
+use SilverStripe\Versioned\Versioned;
 use gorriecoe\DataObjectHistory\extensions\DataObjectHistory;
 
 class MyObject extends DataObject
 {
     private static $extensions = [
+        Versioned::class . '.versioned',
         DataObjectHistory::class
     ];
 
