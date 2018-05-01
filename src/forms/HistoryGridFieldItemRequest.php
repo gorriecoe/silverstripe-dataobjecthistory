@@ -2,7 +2,6 @@
 namespace gorriecoe\DataObjectHistory\Forms;
 
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\HiddenField;
 use SilverStripe\Forms\ReadonlyField;
 use SilverStripe\Forms\FormAction;
@@ -100,17 +99,10 @@ class HistoryGridFieldItemRequest extends VersionedGridFieldItemRequest
             );
         }
 
-        $fields->unshift(
-            LiteralField::create(
-                'CurrentlyViewingMessage',
-                ArrayData::create([
-                    'Content' => DBField::create_field('HTMLFragment', $message),
-                    'Classes' => 'notice'
-                ])
-                ->renderWith('Silverstripe\\CMS\\Controllers\\Includes\\CMSMain_notice')
-            )
+        $form->sessionMessage(
+            DBField::create_field('HTMLFragment', $message),
+            'notice'
         );
-
         $form->setFields($fields);
         return $form;
     }
