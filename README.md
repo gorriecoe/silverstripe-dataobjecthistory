@@ -4,7 +4,7 @@ Adds a history tab to dataobjects
 ## Installation
 Composer is the recommended way of installing SilverStripe modules.
 ```
-composer require gorriecoe/silverstripe-dataobjecthistory
+composer require bitwingsde/silverstripe-dataobjecthistory
 ```
 
 ## Requirements
