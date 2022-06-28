@@ -50,9 +50,6 @@ class DataObjectHistory extends DataExtension
     public function getHistoryFields()
     {
         $owner = $this->owner;
-        if (!$owner->isLatestVersion()) {
-            return null;
-        }
 
         $config = GridFieldConfig_RecordViewer::create()
             ->removeComponentsByType([
