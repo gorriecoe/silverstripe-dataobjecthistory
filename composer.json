@@ -1,5 +1,5 @@
 {
-  "name": "gorriecoe/silverstripe-dataobjecthistory",
+  "name": "bitwingsde/silverstripe-dataobjecthistory",
   "description": "Adds a history tab to dataobjects",
   "type": "silverstripe-vendormodule",
   "license": "BSD-3-Clause",
@@ -7,6 +7,12 @@
     {
       "name": "Gorrie Coe",
       "email": "gorriecoe@gmail.com"
+    },
+    {
+      "name": "David Hengl",
+      "email": "david.hengl@bitwings.de",
+      "homepage": "https://bitwings.de",
+      "role": "Developer"
     }
   ],
   "keywords": [
